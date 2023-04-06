@@ -1,0 +1,21 @@
+# venv
+venv/
+
+# Compiled Python files
+*.pyc
+
+# Python cache
+__pycache__/
+
+# macOS metadata
+.DS_Store
+
+# Environment variables
+.env
+
+*/input/*.*
+*/output/*.*
+*/unlabeled/*.*
+**/*.h5
+
+*/config.py
