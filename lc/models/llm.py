@@ -28,5 +28,3 @@ print(f"Number of tokens: {num_tokens}")
 
 # %%
 loaded_llm = load_llm("llm.json")
-
-# %%
