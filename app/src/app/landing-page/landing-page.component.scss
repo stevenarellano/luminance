@@ -7,63 +7,8 @@
   background-image: url("../../assets/background.png");
   height: 100vh;
   width: 100%;
-}
 
-.input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: rgba(100, 100, 100, 0.25);
-  backdrop-filter: blur(10px);
-
-  gap: 0.5rem;
-  width: 50%;
-  padding: 2rem;
-  border-radius: 10px;
-
-  * {
-    height: 2rem;
-    border-radius: 5px;
+  & > * {
+    width: 60%;
   }
-
-  animation: fadeIn 1s ease-in-out;
-}
-
-input[type="text"] {
-  padding: 0 0.5rem;
-  width: 90%;
-
-  font-size: 1.15rem;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-button {
-  padding: 0 0.5rem;
-  background-color: blue;
-  color: white;
-
-  border: none;
-  font-size: 1.25rem;
-
-  &:hover:not(.disabled-btn) {
-    background-color: darkblue;
-    cursor: pointer;
-  }
-}
-
-.disabled-btn {
-  background-color: grey;
-}
-
-.disabled-input {
-  border-color: red;
 }

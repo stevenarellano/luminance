@@ -19,4 +19,6 @@
 - RxJS (Reactive Extensions for JavaScript)
   - Streams => sequence of events over time (x,y position, mouse click, etc.)
   - Reactive Programming = Streams + Operations
-  - 
+- Constructors
+  - public => available in the template
+  - private => not available in the template

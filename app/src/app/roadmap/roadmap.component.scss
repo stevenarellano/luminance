@@ -1,0 +1,46 @@
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+
+  background-color: rgba(100, 100, 100, 0.25);
+  backdrop-filter: blur(10px);
+
+  width: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+
+  animation: fadeIn 1s ease-in-out;
+
+  max-height: 90vh;
+  overflow-y: scroll;
+
+  & > div:first-child {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  color: white;
+}
+.card {
+  & > div:first-child {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+}
+li {
+  margin-left: 1rem;
+}

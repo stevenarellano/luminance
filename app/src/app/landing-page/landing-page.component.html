@@ -1,7 +1,4 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit()" [formGroup]='myForm' novalidate class='input-container'>
-        <input type="text" placeholder="What would you like to learn?"
-            [ngClass]="{'disabled-input': topic.invalid && topic.touched}" formControlName='topic' />
-        <button type="submit" [disabled]="myForm.invalid" [ngClass]="{'disabled-btn': myForm.invalid}">submit</button>
-    </form>
+    <app-prompt *ngIf="curriculum === null"></app-prompt>
+    <app-roadmap *ngIf="curriculum !== null"></app-roadmap>
 </div>

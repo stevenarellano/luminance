@@ -10,8 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { PromptComponent } from './prompt/prompt.component';
 
+import { CurriculumService } from './services/curriculum.service';
+import { RoadmapComponent } from './roadmap/roadmap.component';
 @NgModule({
-  declarations: [AppComponent, LandingPageComponent, PromptComponent],
+  declarations: [AppComponent, LandingPageComponent, PromptComponent, RoadmapComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,7 +22,7 @@ import { PromptComponent } from './prompt/prompt.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [CurriculumService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

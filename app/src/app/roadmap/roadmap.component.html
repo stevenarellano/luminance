@@ -1,0 +1,9 @@
+<div class="roadmap">
+    <div>Curriculum</div>
+    <div class="card" *ngFor="let item of curriculum">
+        <div>{{ item.title }}</div>
+        <ol>
+            <li *ngFor="let topic of item.topics">{{ topic }}</li>
+        </ol>
+    </div>
+</div>

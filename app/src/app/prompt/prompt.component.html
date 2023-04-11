@@ -1,1 +1,11 @@
-<p>prompt works!</p>
+<form (ngSubmit)="onSubmit()" [formGroup]='myForm' novalidate class='input-container'
+    [ngClass]="{'disabled-form': curriculumService.loading}">
+    <input type="text" placeholder="What would you like to learn?"
+        [ngClass]="{'disabled-input': topic.invalid && topic.touched}" formControlName='topic'
+        [disabled]="curriculumService.loading" />
+    <button type="submit" [disabled]="myForm.invalid || curriculumService.loading"
+        [ngClass]="{'disabled-btn': myForm.invalid}">
+        <span *ngIf="!curriculumService.loading">submit</span>
+        <span *ngIf="curriculumService.loading">loading...</span>
+    </button>
+</form>
