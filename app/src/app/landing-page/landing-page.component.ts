@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BASEURL } from 'src/constants';
 
 @Component({
   selector: 'app-landing-page',
@@ -26,12 +27,20 @@ export class LandingPageComponent implements OnInit {
   onSubmit() {
     if (this.myForm.valid) {
       console.log(`Topic: ${this.topic.value}`);
+      const url = `${BASEURL}/upload?topic=${this.topic.value}`;
+      this.observable = this.http.get(url);
       this.myForm.reset();
-    }
-    console.log(this.http.get('http://ip.jsontest.com/'));
-    this.observable = this.http.get('http://ip.jsontest.com/');
-  }
 
+      this.observable.subscribe(
+        (data: any) => {
+          console.log(data);
+        },
+        (error: any) => {
+          console.log(error);
+        }
+      );
+    }
+  }
   ngOnInit() {
     this.createForm();
   }

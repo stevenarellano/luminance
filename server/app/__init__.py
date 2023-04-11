@@ -1,10 +1,12 @@
 from flask import Flask
 
 from .routes import init_routes
-# from .llm import *
+from flask_cors import CORS
+
 
 app = Flask(__name__)
 init_routes(app)
+CORS(app)
 
 
 @app.route('/')
